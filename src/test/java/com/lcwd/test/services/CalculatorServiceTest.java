@@ -22,6 +22,7 @@ public class CalculatorServiceTest
 
     //Test Method of add Two Numbers
     @Test
+    //@Disabled// If we want to Ignore any test case
     public void addTwoNumbersTest()
     {
         System.out.println("Test Beginning for addTwoNumbers");
