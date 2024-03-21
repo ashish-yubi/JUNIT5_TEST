@@ -1,27 +1,26 @@
 package com.lcwd.test.services;
 
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class CalculatorServiceTest
 {
+
+    @BeforeAll //This help in initializing  logic before executing any test  cases
+    public static void init()
+    {
+        System.out.println("Before all Test case I am Executed :) ");
+        System.out.println("Testing Begin");
+    }
+
+    @BeforeEach
+    public void beforeEach()
+    {
+        //This Executes before each test case
+        System.out.println("I Execute Before Each Test Case");
+    }
+
     //Test Method of add Two Numbers
-
-//    @BeforeClass //This help in initializing  logic before executing any test  cases
-//    public static void init()
-//    {
-//        System.out.println("Before all Test case I am Executed :) ");
-//        System.out.println("Testing Begin");
-//    }
-//
-//    @Before
-//    public void beforeEach()
-//    {
-//        //This Executes before each test case
-//        System.out.println("I Execute Before Each Test Case");
-//    }
-
     @Test
     public void addTwoNumbersTest()
     {
@@ -43,16 +42,16 @@ public class CalculatorServiceTest
         System.out.println("Test Ending for addAnyNumbers");
     }
 
-//    @After
-//    public void afterEach()
-//    {
-//        System.out.println("I Execute After Each Test Case");
-//    }
-//
-//    @AfterClass //This Executes after all test cases
-//    public static void cleanup()
-//    {
-//        System.out.println("Testing Ended");
-//        System.out.println("After all Test case I am Executed :) ");
-//    }
+    @AfterEach
+    public void afterEach()
+    {
+        System.out.println("I Execute After Each Test Case");
+    }
+
+    @AfterAll //This Executes after all test cases
+    public static void cleanup()
+    {
+        System.out.println("Testing Ended");
+        System.out.println("After all Test case I am Executed :) ");
+    }
 }
